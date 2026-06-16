@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduBest | 프리미엄 학원 큐레이션</title>
+<meta name="description" content="수천 개 교육기관 중 합격 실적·강사 경력·수강생 만족도로 검증된 프리미엄 127곳만 엄선 소개합니다.">
+<meta name="keywords" content="프리미엄교육, 교육큐레이션, 우수교육추천, 검증교육, 입시준비, 명문교육, 교육선택">
+<link rel="canonical" href="https://edubest.kr/">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://edubest.kr/">
+<meta property="og:site_name" content="EduBest">
+<meta property="og:title" content="EduBest | 프리미엄 학원 큐레이션">
+<meta property="og:description" content="수천 개 교육기관 중 합격 실적·강사 경력·수강생 만족도로 검증된 프리미엄 127곳만 엄선 소개합니다.">
+<meta property="og:image" content="https://edubest.kr/apple-touch-icon.png">
+<meta property="og:locale" content="ko_KR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Noto+Serif+KR:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --cream:#FAF7F2;
+  --cream-d:#F0EAE0;
+  --cream-dd:#E5DDD0;
+  --brown:#2C1810;
+  --brown-m:#5C3D2E;
+  --brown-l:#8C6D5A;
+  --gold:#C9A96E;
+  --gold-d:#A8844A;
+  --gold-l:#DFC08A;
+  --border:rgba(44,24,16,0.12);
+  --border-gold:rgba(201,169,110,0.35);
+}
+
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',-apple-system,sans-serif;
+  background:var(--cream);
+  color:var(--brown);
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  word-break:keep-all;
+}
+
+.damier{
+  background-image:
+    repeating-conic-gradient(
+      rgba(44,24,16,0.045) 0% 25%,
+      transparent 0% 50%
+    );
+  background-size:28px 28px;
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(250,247,242,0.97);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.nav-top{
+  height:8px;
+  background:var(--brown);
+}
+.nav-inner{
+  max-width:1320px;margin:0 auto;padding:0 60px;
+  height:60px;display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:20px;font-weight:600;
+  letter-spacing:8px;text-transform:uppercase;
+  color:var(--brown);
+}
+.nav-center{
+  display:flex;gap:48px;
+}
+.nav-link{
+  font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--brown-m);text-decoration:none;font-weight:500;
+  transition:color 0.2s;
+}
+.nav-link:hover{color:var(--gold-d)}
+.nav-right{
+  font-size:10px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--brown-l);font-weight:400;
+}
+
+/* ── HERO ── */
+.hero{
+  padding-top:68px;
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  position:relative;overflow:hidden;
+}
+.hero-pattern{
+  position:absolute;inset:0;
+  background-image:
+    repeating-conic-gradient(
+      rgba(44,24,16,0.038) 0% 25%,
+      transparent 0% 50%
+    );
+  background-size:32px 32px;
+}
+.hero-vignette{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 50%, var(--cream) 30%, transparent 100%);
+}
+.hero-body-wrap{
+  flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;
+  position:relative;padding:80px 60px 60px;
+}
+.hero-monogram{
+  width:84px;height:84px;border:1.5px solid var(--gold);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  margin:0 auto 36px;
+}
+.hero-monogram-inner{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:26px;font-weight:500;letter-spacing:4px;
+  color:var(--gold);
+}
+.hero-eyebrow{
+  font-size:10px;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold-d);margin-bottom:28px;font-weight:500;
+}
+.hero-title{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:clamp(58px,8.5vw,120px);
+  font-weight:500;line-height:1.0;
+  letter-spacing:-1px;color:var(--brown);
+  margin-bottom:36px;
+}
+.hero-title em{font-style:italic;color:var(--gold-d)}
+.hero-sub{
+  font-size:14px;letter-spacing:0.2px;
+  color:var(--brown-l);line-height:1.85;
+  max-width:500px;margin:0 auto 52px;font-weight:300;
+}
+.hero-rule{
+  width:56px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin:0 auto 52px;
+}
+.hero-stats{
+  display:flex;gap:0;border:1px solid var(--border);
+}
+.hs-item{
+  padding:28px 52px;border-right:1px solid var(--border);
+  text-align:center;
+}
+.hs-item:last-child{border-right:none}
+.hs-num{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:34px;font-weight:500;color:var(--brown);
+  letter-spacing:-1px;line-height:1;margin-bottom:10px;
+}
+.hs-label{
+  font-size:10px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--brown-l);font-weight:400;
+}
+.hero-scroll{
+  padding:28px 0 36px;text-align:center;position:relative;
+}
+.hero-scroll-line{
+  display:block;width:1px;height:44px;
+  background:linear-gradient(180deg,var(--gold),transparent);
+  margin:0 auto 10px;
+}
+.hero-scroll-label{
+  font-size:9px;letter-spacing:3.5px;text-transform:uppercase;
+  color:var(--brown-l);font-weight:400;
+}
+
+/* ── PANEL ── */
+.hero-panel{
+  background:var(--cream-d);
+  border-top:1px solid var(--border);
+}
+.hero-panel-inner{
+  max-width:1320px;margin:0 auto;padding:0 60px;
+  display:grid;grid-template-columns:repeat(5,1fr);
+}
+.hp-col{
+  padding:28px 20px;border-right:1px solid var(--border);
+}
+.hp-col:first-child{padding-left:0}
+.hp-col:last-child{border-right:none}
+.hp-num{
+  font-size:10px;letter-spacing:2px;color:var(--gold-d);
+  margin-bottom:10px;font-weight:500;
+}
+.hp-name{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:16px;font-weight:500;color:var(--brown);
+  margin-bottom:5px;line-height:1.35;
+}
+.hp-detail{font-size:11px;color:var(--brown-l);letter-spacing:0.2px;line-height:1.5}
+
+/* ── BAND ── */
+.band{
+  background:var(--brown);
+  padding:16px 60px;
+  overflow:hidden;
+}
+.band-inner{
+  max-width:1320px;margin:0 auto;
+  display:flex;align-items:center;
+}
+.band-item{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:14px;color:rgba(250,247,242,0.55);
+  padding:0 36px;border-right:1px solid rgba(250,247,242,0.12);
+  white-space:nowrap;
+}
+.band-item:first-child{padding-left:0}
+.band-item:last-child{border-right:none}
+.band-item strong{color:var(--gold-l)}
+
+/* ── CURATED LIST ── */
+.curated{
+  max-width:1320px;margin:0 auto;padding:88px 60px;
+}
+.section-head{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;align-items:end;
+  margin-bottom:56px;
+  padding-bottom:28px;
+  border-bottom:1px solid var(--border);
+}
+.section-eyebrow{
+  font-size:10px;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold-d);margin-bottom:18px;
+  display:flex;align-items:center;gap:14px;font-weight:500;
+}
+.section-eyebrow::before{
+  content:'';display:block;width:22px;height:1px;
+  background:var(--gold-d);flex-shrink:0;
+}
+.section-title{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:clamp(34px,3.2vw,48px);font-weight:500;
+  letter-spacing:-0.3px;line-height:1.12;color:var(--brown);
+}
+.section-title em{font-style:italic;color:var(--gold-d)}
+.sh-right{
+  font-size:14px;color:var(--brown-l);
+  line-height:1.85;font-weight:300;
+}
+
+.ac-list{}
+.ac-item{
+  display:grid;
+  grid-template-columns:64px 1fr 180px 180px;
+  gap:40px;align-items:center;
+  padding:30px 0;
+  border-bottom:1px solid var(--border);
+  transition:all 0.25s;
+  position:relative;
+}
+.ac-item::before{
+  content:'';
+  position:absolute;left:0;top:0;bottom:0;
+  width:0;background:var(--gold);
+  transition:width 0.25s;
+}
+.ac-item:hover::before{width:2px}
+.ac-item:hover{padding-left:18px}
+.ac-item:last-child{border-bottom:none}
+
+.ai-num{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:13px;letter-spacing:1.5px;
+  color:var(--gold-d);font-weight:400;
+}
+.ai-name{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:22px;font-weight:500;color:var(--brown);
+  margin-bottom:5px;line-height:1.25;
+}
+.ai-loc{
+  font-size:12px;color:var(--brown-l);
+  margin-bottom:10px;letter-spacing:0.2px;line-height:1.5;
+}
+.ai-tags{display:flex;gap:6px;flex-wrap:wrap}
+.ai-tag{
+  font-size:9px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--gold-d);
+  border:1px solid var(--border-gold);
+  padding:3px 9px;font-weight:500;
+}
+.ai-score-num{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:32px;font-weight:500;color:var(--brown);
+  letter-spacing:-1px;line-height:1;
+}
+.ai-score-label{
+  font-size:9px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--brown-l);margin-top:6px;font-weight:400;
+}
+.ai-fee-num{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:22px;font-weight:400;color:var(--brown);
+}
+.ai-fee-period{
+  font-size:10px;letter-spacing:1px;
+  color:var(--brown-l);margin-top:4px;
+}
+
+/* ── PATTERN DIVIDER ── */
+.pattern-divider{
+  height:100px;
+  background-image:
+    repeating-conic-gradient(
+      rgba(44,24,16,0.06) 0% 25%,
+      var(--cream-d) 0% 50%
+    );
+  background-size:30px 30px;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+}
+.pd-badge{
+  background:var(--cream);
+  border:1px solid var(--border);
+  padding:11px 36px;
+  font-size:11px;letter-spacing:6px;text-transform:uppercase;
+  color:var(--brown);font-weight:500;
+}
+
+/* ── CRITERIA ── */
+.criteria-wrap{
+  background:var(--brown);
+  padding:88px 60px;
+}
+.criteria-inner{max-width:1320px;margin:0 auto}
+.crit-head{
+  text-align:center;margin-bottom:64px;
+}
+.crit-eyebrow{
+  font-size:10px;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:22px;font-weight:500;
+}
+.crit-title{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:clamp(34px,3.2vw,48px);font-weight:500;
+  color:var(--cream);letter-spacing:-0.3px;line-height:1.15;
+}
+.crit-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border:1px solid rgba(250,247,242,0.1);
+}
+.crit-item{
+  padding:36px 32px;
+  border-right:1px solid rgba(250,247,242,0.1);
+  border-bottom:1px solid rgba(250,247,242,0.1);
+  position:relative;
+}
+.crit-item:nth-child(3n){border-right:none}
+.crit-item:nth-last-child(-n+3){border-bottom:none}
+.crit-item::before{
+  content:'';position:absolute;top:0;left:32px;right:32px;
+  height:1px;background:linear-gradient(90deg,var(--gold),transparent);
+}
+.crit-item:nth-child(4)::before,
+.crit-item:nth-child(5)::before,
+.crit-item:nth-child(6)::before{display:none}
+.ci-num{
+  font-size:10px;letter-spacing:3.5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:18px;font-weight:500;
+}
+.ci-title{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:20px;font-weight:500;
+  color:var(--cream);margin-bottom:14px;line-height:1.3;
+}
+.ci-body{
+  font-size:13px;color:rgba(250,247,242,0.48);
+  line-height:1.85;font-weight:300;
+}
+
+/* ── DATA SECTION ── */
+.data-section{
+  max-width:1320px;margin:0 auto;padding:88px 60px;
+  text-align:center;
+}
+.data-eyebrow{
+  font-size:10px;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold-d);margin-bottom:52px;
+  display:flex;align-items:center;justify-content:center;gap:18px;
+  font-weight:500;
+}
+.data-eyebrow::before,.data-eyebrow::after{
+  content:'';display:block;width:44px;height:1px;
+  background:var(--gold-d);
+}
+.ds-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--border);
+}
+.ds-col{
+  padding:44px 32px;
+  border-right:1px solid var(--border);
+}
+.ds-col:last-child{border-right:none}
+.ds-num{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:50px;font-weight:500;color:var(--brown);
+  letter-spacing:-1px;line-height:1;margin-bottom:14px;
+}
+.ds-label{
+  font-size:10px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--brown-l);line-height:1.7;font-weight:400;
+}
+
+/* ── QUOTE ── */
+.quote-section{
+  background:var(--cream-d);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:88px 60px;text-align:center;
+}
+.quote-monogram{
+  font-size:11px;letter-spacing:6px;text-transform:uppercase;
+  color:var(--gold-d);margin-bottom:36px;font-weight:500;
+}
+.quote-text{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:clamp(24px,2.6vw,36px);
+  font-weight:400;font-style:italic;
+  line-height:1.6;
+  color:var(--brown);max-width:740px;margin:0 auto 28px;
+}
+.quote-text em{color:var(--gold-d);font-style:normal}
+.quote-rule{
+  width:44px;height:1px;background:var(--gold);
+  margin:0 auto 18px;
+}
+.quote-attr{
+  font-size:10px;letter-spacing:3.5px;text-transform:uppercase;
+  color:var(--brown-l);font-weight:400;
+}
+
+.footer-band{
+  height:8px;background:var(--brown);
+}
+footer{
+  padding:36px 60px;
+  border-top:1px solid var(--border);
+  background:var(--cream);
+}
+.footer-inner{
+  max-width:1320px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.f-logo{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:16px;font-weight:600;
+  letter-spacing:7px;text-transform:uppercase;color:var(--brown);
+}
+.f-center{
+  font-family:'Playfair Display','Noto Serif KR',Georgia,serif;
+  font-size:14px;font-style:italic;color:var(--gold-d);
+}
+.f-meta{
+  font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--brown-l);font-weight:400;
+}
+
+@media(max-width:900px){
+  .nav-center{display:none}
+  .nav-inner{padding:0 28px}
+  .hero-body-wrap{padding:60px 28px 40px}
+  .hs-item{padding:20px 24px}
+  .band{padding:16px 28px}
+  .curated,.data-section{padding:64px 28px}
+  .criteria-wrap{padding:64px 28px}
+  .quote-section{padding:64px 28px}
+  .section-head{grid-template-columns:1fr;gap:24px}
+  .ac-item{grid-template-columns:48px 1fr;gap:16px}
+  .ai-score,.ai-fee{display:none}
+  .crit-grid{grid-template-columns:1fr}
+  .crit-item:nth-child(3n){border-right:1px solid rgba(250,247,242,0.1)}
+  .ds-grid{grid-template-columns:repeat(2,1fr)}
+  .ds-col:nth-child(2){border-right:none}
+  .ds-col:nth-child(3){border-right:1px solid var(--border);border-top:1px solid var(--border)}
+  .ds-col:nth-child(4){border-top:1px solid var(--border)}
+  .hero-panel-inner{grid-template-columns:1fr 1fr;padding:0 28px}
+  .hp-col:nth-child(2n){border-right:none}
+  .hp-col:nth-child(n+3){border-top:1px solid var(--border)}
+  footer{padding:28px}
+  .footer-inner{flex-direction:column;gap:14px;text-align:center}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": "https://edubest.kr/#organization",
+  "name": "EduBest",
+  "alternateName": ["에듀베스트", "에듀 베스트"],
+  "url": "https://edubest.kr",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://edubest.kr/apple-touch-icon.png",
+    "width": 180,
+    "height": 180
+  },
+  "image": "https://edubest.kr/apple-touch-icon.png",
+  "description": "합격 실적·강사 경력으로 검증된 플랫폼.",
+  "areaServed": "대한민국",
+  "telephone": "010-5291-6438",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "서울특별시 강남구 대치동 942",
+    "addressCountry": "KR"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://edubest.kr/#website",
+  "name": "EduBest",
+  "alternateName": ["에듀베스트", "에듀 베스트"],
+  "url": "https://edubest.kr",
+  "publisher": {
+    "@id": "https://edubest.kr/#organization"
+  },
+  "inLanguage": "ko-KR"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-top"></div>
+  <div class="nav-inner">
+    <div class="nav-logo">EduBest</div>
+    <nav class="nav-center">
+      <a href="#" class="nav-link">큐레이션</a>
+      <a href="#" class="nav-link">선정 기준</a>
+      <a href="#" class="nav-link">지역별 검색</a>
+      <a href="#" class="nav-link">과목별 검색</a>
+    </nav>
+    <div class="nav-right">프리미엄 학원 큐레이션</div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-body-wrap">
+    <div class="hero-monogram">
+      <div class="hero-monogram-inner">EB</div>
+    </div>
+    <div class="hero-eyebrow">Curated Academy Selection · 2026</div>
+    <h1 class="hero-title">오직<br><em>최고만을</em><br>선별합니다</h1>
+    <div class="hero-rule"></div>
+    <div class="hero-sub">수천 개의 기관 중 진정한 교육적 가치를 지닌 곳만을 엄선합니다. 합격 실적, 강사 경력, 교육 철학을 기준으로 검증된 프리미엄 기관만을 소개합니다.</div>
+    <div class="hero-stats">
+      <div class="hs-item"><div class="hs-num">127</div><div class="hs-label">선별 기관</div></div>
+      <div class="hs-item"><div class="hs-num">94%</div><div class="hs-label">평균 합격률</div></div>
+      <div class="hs-item"><div class="hs-num">★ 4.8</div><div class="hs-label">평균 만족도</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span class="hero-scroll-line"></span>
+    <span class="hero-scroll-label">Scroll</span>
+  </div>
+</div>
+
+<div class="hero-panel">
+  <div class="hero-panel-inner">
+    <div class="hp-col">
+      <div class="hp-num">No. 01</div>
+      <div class="hp-name">대치 수학의 정석</div>
+      <div class="hp-detail">강남구 · 수능수학 · 합격률 94%</div>
+    </div>
+    <div class="hp-col">
+      <div class="hp-num">No. 02</div>
+      <div class="hp-name">목동 영어 엘리트</div>
+      <div class="hp-detail">양천구 · 내신영어 · 만족도 4.9</div>
+    </div>
+    <div class="hp-col">
+      <div class="hp-num">No. 03</div>
+      <div class="hp-name">분당 과학탐구</div>
+      <div class="hp-detail">성남시 · 수능과학 · 합격률 89%</div>
+    </div>
+    <div class="hp-col">
+      <div class="hp-num">No. 04</div>
+      <div class="hp-name">노원 국어논술원</div>
+      <div class="hp-detail">노원구 · 대입논술 · 합격률 91%</div>
+    </div>
+    <div class="hp-col">
+      <div class="hp-num">No. 05</div>
+      <div class="hp-name">잠실 코딩스쿨</div>
+      <div class="hp-detail">송파구 · 코딩교육 · 수료율 96%</div>
+    </div>
+  </div>
+</div>
+
+<div class="band">
+  <div class="band-inner">
+    <div class="band-item"><strong>합격 실적</strong> 검증</div>
+    <div class="band-item"><strong>강사 경력</strong> 확인</div>
+    <div class="band-item"><strong>수강생 후기</strong> 분석</div>
+    <div class="band-item"><strong>커리큘럼</strong> 평가</div>
+    <div class="band-item">Selection Criteria</div>
+  </div>
+</div>
+
+<div class="curated">
+  <div class="section-head">
+    <div>
+      <div class="section-eyebrow">Curated List 2026</div>
+      <h2 class="section-title">엄선된<br><em>프리미엄 학원</em></h2>
+    </div>
+    <div class="sh-right">전국 12,841개 기관 중 스터디팝 평가 기준을 통과한 127개 기관만을 소개합니다. 합격률, 강사 경력, 수강생 만족도, 커리큘럼 구성 4개 항목을 종합 평가합니다.</div>
+  </div>
+  <div class="ac-list">
+    <div class="ac-item">
+      <div class="ai-num">No. 01</div>
+      <div>
+        <div class="ai-name">대치 수학의 정석</div>
+        <div class="ai-loc">서울특별시 강남구 대치동</div>
+        <div class="ai-tags"><span class="ai-tag">수학</span><span class="ai-tag">고등</span><span class="ai-tag">수능</span></div>
+      </div>
+      <div><div class="ai-score-num">94%</div><div class="ai-score-label">합격률</div></div>
+      <div><div class="ai-fee-num">35만원</div><div class="ai-fee-period">월 수강료</div></div>
+    </div>
+    <div class="ac-item">
+      <div class="ai-num">No. 02</div>
+      <div>
+        <div class="ai-name">목동 영어 엘리트</div>
+        <div class="ai-loc">서울특별시 양천구 목동</div>
+        <div class="ai-tags"><span class="ai-tag">영어</span><span class="ai-tag">중등</span><span class="ai-tag">내신</span></div>
+      </div>
+      <div><div class="ai-score-num">★4.9</div><div class="ai-score-label">만족도</div></div>
+      <div><div class="ai-fee-num">28만원</div><div class="ai-fee-period">월 수강료</div></div>
+    </div>
+    <div class="ac-item">
+      <div class="ai-num">No. 03</div>
+      <div>
+        <div class="ai-name">잠실 코딩스쿨</div>
+        <div class="ai-loc">서울특별시 송파구 잠실동</div>
+        <div class="ai-tags"><span class="ai-tag">코딩</span><span class="ai-tag">초중등</span><span class="ai-tag">Python</span></div>
+      </div>
+      <div><div class="ai-score-num">96%</div><div class="ai-score-label">수료율</div></div>
+      <div><div class="ai-fee-num">32만원</div><div class="ai-fee-period">월 수강료</div></div>
+    </div>
+    <div class="ac-item">
+      <div class="ai-num">No. 04</div>
+      <div>
+        <div class="ai-name">분당 과학탐구</div>
+        <div class="ai-loc">경기도 성남시 분당구 서현동</div>
+        <div class="ai-tags"><span class="ai-tag">과학</span><span class="ai-tag">고등</span><span class="ai-tag">심화</span></div>
+      </div>
+      <div><div class="ai-score-num">89%</div><div class="ai-score-label">합격률</div></div>
+      <div><div class="ai-fee-num">42만원</div><div class="ai-fee-period">월 수강료</div></div>
+    </div>
+    <div class="ac-item">
+      <div class="ai-num">No. 05</div>
+      <div>
+        <div class="ai-name">노원 국어논술원</div>
+        <div class="ai-loc">서울특별시 노원구 중계동</div>
+        <div class="ai-tags"><span class="ai-tag">국어</span><span class="ai-tag">논술</span><span class="ai-tag">고등</span></div>
+      </div>
+      <div><div class="ai-score-num">91%</div><div class="ai-score-label">합격률</div></div>
+      <div><div class="ai-fee-num">30만원</div><div class="ai-fee-period">월 수강료</div></div>
+    </div>
+    <div class="ac-item">
+      <div class="ai-num">No. 06</div>
+      <div>
+        <div class="ai-name">서초 수학원</div>
+        <div class="ai-loc">서울특별시 서초구 반포동</div>
+        <div class="ai-tags"><span class="ai-tag">수학</span><span class="ai-tag">초중등</span></div>
+      </div>
+      <div><div class="ai-score-num">91%</div><div class="ai-score-label">합격률</div></div>
+      <div><div class="ai-fee-num">25만원</div><div class="ai-fee-period">월 수강료</div></div>
+    </div>
+    <div class="ac-item">
+      <div class="ai-num">No. 07</div>
+      <div>
+        <div class="ai-name">강동 수능연구소</div>
+        <div class="ai-loc">서울특별시 강동구 천호동</div>
+        <div class="ai-tags"><span class="ai-tag">수능통합</span><span class="ai-tag">고등</span><span class="ai-tag">재수</span></div>
+      </div>
+      <div><div class="ai-score-num">87%</div><div class="ai-score-label">합격률</div></div>
+      <div><div class="ai-fee-num">38만원</div><div class="ai-fee-period">월 수강료</div></div>
+    </div>
+    <div class="ac-item">
+      <div class="ai-num">No. 08</div>
+      <div>
+        <div class="ai-name">마포 영어회화</div>
+        <div class="ai-loc">서울특별시 마포구 합정동</div>
+        <div class="ai-tags"><span class="ai-tag">영어</span><span class="ai-tag">회화</span><span class="ai-tag">성인</span></div>
+      </div>
+      <div><div class="ai-score-num">★4.6</div><div class="ai-score-label">만족도</div></div>
+      <div><div class="ai-fee-num">22만원</div><div class="ai-fee-period">월 수강료</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="pattern-divider">
+  <div class="pd-badge">Selection Standards</div>
+</div>
+
+<div class="criteria-wrap">
+  <div class="criteria-inner">
+    <div class="crit-head">
+      <div class="crit-eyebrow">Selection Criteria</div>
+      <h2 class="crit-title">EduBest 선정 기준</h2>
+    </div>
+    <div class="crit-grid">
+      <div class="crit-item">
+        <div class="ci-num">Criterion I</div>
+        <div class="ci-title">합격 실적 검증</div>
+        <div class="ci-body">최근 3년간의 입시 합격 실적을 직접 확인합니다. 수능 등급 향상, 대입 합격률, 내신 점수 상승을 모두 검토합니다.</div>
+      </div>
+      <div class="crit-item">
+        <div class="ci-num">Criterion II</div>
+        <div class="ci-title">강사진 경력</div>
+        <div class="ci-body">대표 강사의 경력, 자격증, 수능 출제 경험 유무를 확인합니다. 비정규직 강사 의존도가 높은 곳은 제외합니다.</div>
+      </div>
+      <div class="crit-item">
+        <div class="ci-num">Criterion III</div>
+        <div class="ci-title">수강생 후기</div>
+        <div class="ci-body">인증된 수강생 후기 200건 이상을 보유해야 합니다. 허위 후기 필터링 알고리즘을 통해 실제 후기만 집계합니다.</div>
+      </div>
+      <div class="crit-item">
+        <div class="ci-num">Criterion IV</div>
+        <div class="ci-title">커리큘럼 투명성</div>
+        <div class="ci-body">전체 커리큘럼 공개, 수업 계획서 제공, 중간 점검 시스템이 있는 기관을 우선 선정합니다.</div>
+      </div>
+      <div class="crit-item">
+        <div class="ci-num">Criterion V</div>
+        <div class="ci-title">수강료 적정성</div>
+        <div class="ci-body">제공 서비스 대비 수강료가 합리적인지 평가합니다. 과도한 추가 비용이나 불투명한 과금 구조는 감점 요인입니다.</div>
+      </div>
+      <div class="crit-item">
+        <div class="ci-num">Criterion VI</div>
+        <div class="ci-title">교육 환경</div>
+        <div class="ci-body">시설 상태, 반 인원, 자습 공간, 학생 관리 시스템을 직접 방문하여 평가합니다. 최소 분기 1회 재평가를 실시합니다.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="data-section">
+  <div class="data-eyebrow">Numbers</div>
+  <div class="ds-grid">
+    <div class="ds-col">
+      <div class="ds-num">127</div>
+      <div class="ds-label">EduBest<br>선정 기관 수</div>
+    </div>
+    <div class="ds-col">
+      <div class="ds-num">94%</div>
+      <div class="ds-label">선정 기관<br>평균 합격률</div>
+    </div>
+    <div class="ds-col">
+      <div class="ds-num">★4.8</div>
+      <div class="ds-label">선정 기관<br>평균 만족도</div>
+    </div>
+    <div class="ds-col">
+      <div class="ds-num">12,841</div>
+      <div class="ds-label">전체 검토 후<br>선별된 기관</div>
+    </div>
+  </div>
+</div>
+
+<div class="quote-section">
+  <div class="quote-monogram">EduBest · Editorial</div>
+  <div class="quote-text">최고의 교육이란 가장 비싼 곳이 아닙니다. <em>아이와 가장 잘 맞는 기관,</em> 그것이 우리가 찾아드리는 진짜 프리미엄입니다.</div>
+  <div class="quote-rule"></div>
+  <div class="quote-attr">EduBest Editorial · 2026</div>
+</div>
+
+<div class="footer-band"></div>
+<footer>
+  <div class="footer-inner">
+    <div class="f-logo">EduBest</div>
+    <div class="f-center">프리미엄 학원 큐레이션</div>
+    <div class="f-meta">© 2026 EduBest · 127 Selected Academies</div>
+  </div>
+</footer>
+
+</body>
+</html>
