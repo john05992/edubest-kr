@@ -1,0 +1,48 @@
+[ edubest.kr — EduBest | 프리미엄 학원 큐레이션 ]
+
+■ title: EduBest | 프리미엄 학원 큐레이션
+■ description: 합격 실적·강사 경력·만족도로 검증된 프리미엄 교육기관 127곳만 엄선 소개합니다.
+■ keywords: 프리미엄교육, 교육큐레이션, 우수교육추천, 검증교육, 입시준비, 명문교육, 교육선택
+
+─────────────────────────────────────────
+
+<!-- 구조화 데이터: EducationalOrganization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": "https://edubest.kr/#organization",
+  "name": "EduBest",
+  "alternateName": ["에듀베스트", "에듀 베스트"],
+  "url": "https://edubest.kr",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://edubest.kr/apple-touch-icon.png",
+    "width": 180,
+    "height": 180
+  },
+  "image": "https://edubest.kr/apple-touch-icon.png",
+  "description": "합격 실적·강사 경력으로 검증된 플랫폼.",
+  "areaServed": "대한민국",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "KR"
+  }
+}
+</script>
+
+<!-- 구조화 데이터: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://edubest.kr/#website",
+  "name": "EduBest",
+  "alternateName": ["에듀베스트", "에듀 베스트"],
+  "url": "https://edubest.kr",
+  "publisher": {
+    "@id": "https://edubest.kr/#organization"
+  },
+  "inLanguage": "ko-KR"
+}
+</script>
