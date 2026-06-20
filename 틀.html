@@ -6,6 +6,13 @@
   <title>{{title}}</title>
   <meta name="robots" content="index,follow">
   <meta name="description" content="{{meta}}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{meta}}">
+  <meta property="og:url" content="{{페이지url}}">
+  <meta property="og:image" content="https://edubest.kr/img/eb-interior.webp">
+  <meta property="og:image:width" content="2048">
+  <meta property="og:image:height" content="1365">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://nam.veta.naver.com" crossorigin>
   <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -224,42 +231,46 @@
     .ed-cur-item::before { font-weight:900; margin-top:1px; content:'·'; color:#FF4714; flex-shrink:0; }
     .ed-cur-item strong { font-weight:700; color:#fff; }
 
+    /* ── AI 이미지 ── */
+    .ed-ai-img-wrap { background: #fff; padding: 0 24px 56px; }
+    .ed-ai-img { margin: 0 auto; width: 100%; border-radius: 20px; max-width: 720px; display: block; }
+
     /* ── 추천 ── */
-    .ed-rec-section { background:#fff; padding:72px 20px 80px; }
+    .ed-rec-section { padding:72px 20px 80px; background:#fff; }
     .ed-rec-inner { max-width:900px; margin:0 auto; }
-    .ed-rec-eyebrow { color:#FF4714; letter-spacing:.14em; font-size:.72rem; text-transform:uppercase; text-align:center; font-weight:900; margin-bottom:12px; }
-    .ed-rec-title { letter-spacing:-.04em; font-weight:900; line-height:1.35; font-size:clamp(1.6rem,4vw,2.2rem); margin-bottom:48px; color:#111; text-align:center; }
-    .ed-rec-cards { gap:16px; flex-direction:column; display:flex; }
-    @media(min-width:640px){ .ed-rec-cards{ gap:18px; flex-direction:row; } .ed-rec-card{ flex:1; } }
-    .ed-rec-card { border-radius:20px; border:1px solid #f0f0f0; overflow:hidden; flex-direction:column; gap:14px; background:#fafafa; position:relative; display:flex; padding:28px 24px 26px; }
-    .ed-rec-card::before { right:0; height:3px; background:linear-gradient(90deg,#FF4714,#f4ae18); left:0; content:''; top:0; position:absolute; }
+    .ed-rec-eyebrow { text-align:center; font-weight:900; text-transform:uppercase; font-size:.72rem; margin-bottom:12px; color:#FF4714; letter-spacing:.14em; }
+    .ed-rec-title { margin-bottom:48px; font-weight:900; color:#111; letter-spacing:-.04em; line-height:1.35; text-align:center; font-size:clamp(1.6rem,4vw,2.2rem); }
+    .ed-rec-cards { display:flex; flex-direction:column; gap:16px; }
+    @media(min-width:640px){ .ed-rec-cards{ flex-direction:row; gap:18px; } .ed-rec-card{ flex:1; } }
+    .ed-rec-card { display:flex; position:relative; overflow:hidden; border:1px solid #f0f0f0; border-radius:20px; background:#fafafa; padding:28px 24px 26px; flex-direction:column; gap:14px; }
+    .ed-rec-card::before { left:0; right:0; background:linear-gradient(90deg,#FF4714,#f4ae18); position:absolute; top:0; content:''; height:3px; }
     .ed-rec-num { font-size:2.6rem; font-weight:900; background:linear-gradient(135deg,#FF4714,#f4ae18); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1; }
-    .ed-rec-card-title { line-height:1.45; font-weight:900; color:#111; font-size:1.08rem; }
-    .ed-rec-card-desc { flex:1; line-height:1.75; font-size:.83rem; color:#888; }
-    .ed-rec-check { color:#444; background:#fff5f2; font-weight:700; align-items:center; font-size:.82rem; display:flex; gap:7px; border-radius:8px; padding:8px 12px; }
-    .ed-rec-check::before { content:'✓'; color:#FF4714; flex-shrink:0; font-weight:900; font-size:.9rem; }
-    .ed-rec-footer { border-radius:16px; padding:28px 24px; background:linear-gradient(135deg,#fff7f4,#fffdf0); margin-top:44px; text-align:center; border:1px solid #fde8df; }
-    .ed-rec-footer-text { line-height:1.7; font-size:clamp(1rem,3vw,1.18rem); color:#111; font-weight:700; }
+    .ed-rec-card-title { font-size:1.08rem; font-weight:900; color:#111; line-height:1.45; }
+    .ed-rec-card-desc { color:#888; flex:1; line-height:1.75; font-size:.83rem; }
+    .ed-rec-check { align-items:center; display:flex; font-size:.82rem; padding:8px 12px; border-radius:8px; gap:7px; font-weight:700; background:#fff5f2; color:#444; }
+    .ed-rec-check::before { font-size:.9rem; font-weight:900; flex-shrink:0; content:'✓'; color:#FF4714; }
+    .ed-rec-footer { border-radius:16px; background:linear-gradient(135deg,#fff7f4,#fffdf0); margin-top:44px; padding:28px 24px; text-align:center; border:1px solid #fde8df; }
+    .ed-rec-footer-text { font-weight:700; font-size:clamp(1rem,3vw,1.18rem); line-height:1.7; color:#111; }
     .ed-rec-footer-hl { background:linear-gradient(90deg,#FF4714,#f4ae18); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:900; }
 
     /* ── SECTIONS COMMON (유동 영역) ── */
     .ed-sec { padding: 90px 24px; }
-    .ed-sec-inner { max-width: 960px; margin: 0 auto; }
+    .ed-sec-inner { margin: 0 auto; max-width: 960px; }
     .ed-sec-dark { background: #f7f7f7; }
     .ed-sec-light { background: #fdfcf8; }
     .ed-sec-mid { background: #f4f4f0; }
-    .ed-sec h2 { color: #111; letter-spacing: -.03em; font-size: clamp(1.6rem, 3.5vw, 2.2rem); word-break: keep-all; font-weight: 900; line-height: 1.3; margin-bottom: 20px; }
-    .ed-sec h3 { margin-top: 28px; font-size: 1.05rem; line-height: 1.5; font-weight: 900; color: #111; margin-bottom: 16px; }
-    .ed-sec-divider { border-radius: 2px; margin-bottom: 24px; height: 3px; width: 48px; background: #FF4714; }
-    .ed-body-text { word-break: keep-all; color: #555; line-height: 1.85; font-size: 1rem; }
-    .ed-text-card { margin-top: 24px; padding: 36px 32px; background: #f0f0f0; border: 1px solid rgba(0,0,0,.08); border-radius: 20px; }
-    .ed-text-card-light { border: 1px solid #e8e8e8; padding: 36px 32px; margin-top: 24px; box-shadow: 0 4px 24px rgba(0,0,0,.06); background: #fff; border-radius: 20px; }
-    .ed-check-list { margin-top: 24px; gap: 13px; display: flex; list-style: none; flex-direction: column; }
-    .ed-check-item { display: flex; font-size: .9rem; line-height: 1.55; gap: 12px; font-weight: 700; color: #444; align-items: flex-start; }
-    .ed-check-icon { font-weight: 900; margin-top: 2px; color: #FF4714; flex-shrink: 0; }
-    .ed-grade-grid { gap: 24px; max-width: 960px; grid-template-columns: 1fr; margin: 32px auto 0; display: grid; }
+    .ed-sec h2 { font-weight: 900; line-height: 1.3; margin-bottom: 20px; word-break: keep-all; color: #111; font-size: clamp(1.6rem, 3.5vw, 2.2rem); letter-spacing: -.03em; }
+    .ed-sec h3 { line-height: 1.5; font-size: 1.05rem; margin-top: 28px; font-weight: 900; margin-bottom: 16px; color: #111; }
+    .ed-sec-divider { background: #FF4714; margin-bottom: 24px; height: 3px; border-radius: 2px; width: 48px; }
+    .ed-body-text { line-height: 1.85; color: #555; font-size: 1rem; word-break: keep-all; }
+    .ed-text-card { margin-top: 24px; padding: 36px 32px; border: 1px solid rgba(0,0,0,.08); background: #f0f0f0; border-radius: 20px; }
+    .ed-text-card-light { background: #fff; padding: 36px 32px; margin-top: 24px; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,.06); border: 1px solid #e8e8e8; }
+    .ed-check-list { flex-direction: column; margin-top: 24px; display: flex; gap: 13px; list-style: none; }
+    .ed-check-item { font-weight: 700; color: #444; line-height: 1.55; gap: 12px; align-items: flex-start; display: flex; font-size: .9rem; }
+    .ed-check-icon { color: #FF4714; margin-top: 2px; flex-shrink: 0; font-weight: 900; }
+    .ed-grade-grid { gap: 24px; display: grid; grid-template-columns: 1fr; max-width: 960px; margin: 32px auto 0; }
     @media (min-width: 640px) { .ed-grade-grid { grid-template-columns: repeat(3,1fr); } }
-    .ed-grade-card { position: relative; box-shadow: 0 8px 32px rgba(0,0,0,.07); padding: 4px; opacity: 0; animation: fadeInUp .7s ease forwards; transition: all .4s ease; border-radius: 24px; overflow: hidden; transform: translateY(30px); background: #fff; }
+    .ed-grade-card { box-shadow: 0 8px 32px rgba(0,0,0,.07); opacity: 0; animation: fadeInUp .7s ease forwards; background: #fff; border-radius: 24px; position: relative; transform: translateY(30px); overflow: hidden; padding: 4px; transition: all .4s ease; }
     .ed-grade-card:nth-child(1) { animation-delay: .1s; }
     .ed-grade-card:nth-child(2) { animation-delay: .25s; }
     .ed-grade-card:nth-child(3) { animation-delay: .4s; }
@@ -267,47 +278,48 @@
     .ed-grade-card-1::before { background: linear-gradient(135deg,#3B82F6,#8B5CF6); }
     .ed-grade-card-2::before { background: linear-gradient(135deg,#FF4714,#EC4899); }
     .ed-grade-card-3::before { background: linear-gradient(135deg,#10B981,#06B6D4); }
-    .ed-grade-card:hover { box-shadow: 0 22px 55px rgba(0,0,0,.12); transform: translateY(-10px); }
-    .ed-grade-badge { align-items: center; font-weight: 900; font-size: 1.2rem; width: 56px; color: #fff; justify-content: center; position: absolute; height: 56px; border-radius: 50%; z-index: 10; display: flex; box-shadow: 0 6px 20px rgba(0,0,0,.2); right: 24px; top: -12px; }
+    .ed-grade-card:hover { transform: translateY(-10px); box-shadow: 0 22px 55px rgba(0,0,0,.12); }
+    .ed-grade-badge { justify-content: center; width: 56px; font-weight: 900; align-items: center; height: 56px; right: 24px; position: absolute; top: -12px; z-index: 10; font-size: 1.2rem; display: flex; box-shadow: 0 6px 20px rgba(0,0,0,.2); border-radius: 50%; color: #fff; }
     .ed-grade-card-1 .ed-grade-badge { background: linear-gradient(135deg,#3B82F6,#8B5CF6); }
     .ed-grade-card-2 .ed-grade-badge { background: linear-gradient(135deg,#FF4714,#EC4899); }
     .ed-grade-card-3 .ed-grade-badge { background: linear-gradient(135deg,#10B981,#06B6D4); }
     .ed-grade-content { background: #fff; border-radius: 20px; padding: 40px 24px 32px; }
-    .ed-grade-title { font-size: 1.6rem; font-weight: 900; margin-bottom: 12px; color: #111; }
-    .ed-grade-divider { height: 3px; margin-bottom: 16px; width: 40px; border-radius: 2px; transition: width .3s; }
+    .ed-grade-title { font-weight: 900; margin-bottom: 12px; font-size: 1.6rem; color: #111; }
+    .ed-grade-divider { border-radius: 2px; margin-bottom: 16px; width: 40px; transition: width .3s; height: 3px; }
     .ed-grade-card-1 .ed-grade-divider { background: linear-gradient(90deg,#3B82F6,#8B5CF6); }
     .ed-grade-card-2 .ed-grade-divider { background: linear-gradient(90deg,#FF4714,#EC4899); }
     .ed-grade-card-3 .ed-grade-divider { background: linear-gradient(90deg,#10B981,#06B6D4); }
     .ed-grade-card:hover .ed-grade-divider { width: 64px; }
-    .ed-grade-desc { line-height: 1.65; font-size: .9rem; color: #555; }
-    .ed-table-wrap { box-shadow: 0 4px 20px rgba(0,0,0,.08); margin-top: 28px; border-radius: 16px; overflow: hidden; overflow-x: auto; }
+    .ed-grade-desc { line-height: 1.65; color: #555; font-size: .9rem; }
+    .ed-table-wrap { border-radius: 16px; margin-top: 28px; box-shadow: 0 4px 20px rgba(0,0,0,.08); overflow: hidden; overflow-x: auto; }
     .ed-info-table { width: 100%; border-collapse: collapse; }
     .ed-info-table tr { border-bottom: 1px solid rgba(0,0,0,.07); }
     .ed-info-table tr:last-child { border-bottom: none; }
-    .ed-td-label { vertical-align: top; font-size: .88rem; background: #FF4714; white-space: nowrap; color: #fff; padding: 16px 20px; width: 120px; font-weight: 700; }
-    .ed-td-val { background: #fff; line-height: 1.6; font-size: .92rem; color: #333; padding: 16px 20px; }
-    .ed-faq-wrap { gap: 12px; margin-top: 28px; flex-direction: column; display: flex; }
-    .ed-faq-item { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid #e5e5e5; }
-    .ed-faq-q { text-align: left; justify-content: space-between; cursor: pointer; background: none; font-size: .95rem; font-weight: 700; color: #111; width: 100%; font-family: inherit; align-items: flex-start; gap: 12px; border: none; padding: 20px 22px; display: flex; }
-    .ed-faq-arrow { color: #FF4714; transition: transform .3s; font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+    .ed-td-label { background: #FF4714; padding: 16px 20px; width: 120px; font-weight: 700; white-space: nowrap; vertical-align: top; font-size: .88rem; color: #fff; }
+    .ed-td-val { padding: 16px 20px; color: #333; line-height: 1.6; background: #fff; font-size: .92rem; }
+    .ed-faq-wrap { flex-direction: column; gap: 12px; margin-top: 28px; display: flex; }
+    .ed-faq-item { background: #fff; border: 1px solid #e5e5e5; border-radius: 14px; overflow: hidden; }
+    .ed-faq-q { padding: 20px 22px; align-items: flex-start; font-weight: 700; background: none; gap: 12px; color: #111; display: flex; width: 100%; justify-content: space-between; cursor: pointer; font-family: inherit; border: none; text-align: left; font-size: .95rem; }
+    .ed-faq-arrow { font-size: 1rem; color: #FF4714; transition: transform .3s; margin-top: 2px; flex-shrink: 0; }
     .ed-faq-item.ed-open .ed-faq-arrow { transform: rotate(180deg); }
-    .ed-faq-a { color: #555; display: none; font-size: .9rem; line-height: 1.75; padding: 0 22px 18px; }
+    .ed-faq-a { padding: 0 22px 18px; font-size: .9rem; display: none; color: #555; line-height: 1.75; }
     .ed-faq-item.ed-open .ed-faq-a { display: block; }
 
     /* ── 링크 섹션 ── */
-    .ed-lk-section { padding: 64px 24px 56px; background: #f8f8f6; border-bottom: 1px solid #ebebeb; }
-    .ed-lk-eyebrow { color: #FF4714; letter-spacing: .22em; font-weight: 900; margin-bottom: 12px; display: block; text-transform: uppercase; font-size: .68rem; }
-    .ed-lk-section h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); margin-bottom: 36px; font-weight: 900; letter-spacing: -.04em; line-height: 1.25; color: #111; }
+    .ed-lk-section { border-bottom: 1px solid #ebebeb; padding: 64px 24px 56px; background: #f8f8f6; }
+    .ed-lk-eyebrow { text-transform: uppercase; letter-spacing: .22em; font-weight: 900; margin-bottom: 12px; font-size: .68rem; color: #FF4714; display: block; }
+    .ed-lk-section h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); color: #111; margin-bottom: 36px; line-height: 1.25; font-weight: 900; letter-spacing: -.04em; }
+    #ed-lk-section h3 { letter-spacing: -.04em; line-height: 1.25; font-weight: 900; font-size: clamp(1.5rem, 3.5vw, 2.1rem); margin-bottom: 36px; color: #111; }
     .ed-lk-group { margin-bottom: 28px; }
     .ed-lk-group:last-child { margin-bottom: 0; }
-    .ed-lk-h3 { margin-bottom: 12px; letter-spacing: .18em; text-transform: uppercase; color: #FF4714; padding-bottom: 10px; border-bottom: 2px solid #FF4714; display: block; font-size: .72rem; font-weight: 900; }
-    .ed-lk-grid { grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); display: grid; gap: 10px; }
-    .ed-lk-item { text-decoration: none; color: #333; display: block; overflow: hidden; font-weight: 700; transition: all .2s; line-height: 52px; border-radius: 12px; height: 52px; text-align: center; border: 1.5px solid #e8e8e8; background: #fff; font-size: .84rem; box-shadow: 0 2px 8px rgba(0,0,0,.04); padding: 0 16px; text-overflow: ellipsis; white-space: nowrap; }
-    .ed-lk-item:hover { border-color: #FF4714; color: #fff; transform: translateY(-2px); background: #FF4714; box-shadow: 0 6px 20px rgba(255,71,20,.28); }
+    .ed-lk-h3 { border-bottom: 2px solid #FF4714; font-size: .72rem; padding-bottom: 10px; text-transform: uppercase; font-weight: 900; display: block; margin-bottom: 12px; color: #FF4714; letter-spacing: .18em; }
+    .ed-lk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: 10px; }
+    .ed-lk-item { font-size: .84rem; transition: all .2s; border-radius: 12px; font-weight: 700; height: 52px; text-align: center; overflow: hidden; text-decoration: none; background: #fff; text-overflow: ellipsis; color: #333; white-space: nowrap; display: block; box-shadow: 0 2px 8px rgba(0,0,0,.04); padding: 0 16px; line-height: 52px; border: 1.5px solid #e8e8e8; }
+    .ed-lk-item:hover { transform: translateY(-2px); color: #fff; border-color: #FF4714; box-shadow: 0 6px 20px rgba(255,71,20,.28); background: #FF4714; }
     @media (max-width: 480px) {
       .ed-lk-section { padding: 48px 20px 44px; }
       .ed-lk-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-      .ed-lk-item { line-height: 48px; font-size: .82rem; height: 48px; }
+      .ed-lk-item { height: 48px; line-height: 48px; font-size: .82rem; }
       .ed-monologue { font-size: 1.35rem; }
       .ed-fact-title { font-size: 1.9rem; }
     }
@@ -315,24 +327,24 @@
     /* ── 방법론 이미지 ── */
     .ed-method-section { padding: 0 24px 72px; background: #fff; }
     .ed-method-inner { margin: 0 auto; max-width: 480px; }
-    .ed-method-img { border-radius: 20px; display: block; box-shadow: 0 8px 28px rgba(0,0,0,.10); width: 100%; }
+    .ed-method-img { width: 100%; display: block; border-radius: 20px; box-shadow: 0 8px 28px rgba(0,0,0,.10); }
 
     /* edubest.kr micro-variation */
     .ed-sec { padding: 88px 22px; }
     .ed-planner-section { padding: 86px 22px 94px; }
     .ed-brand-header { padding: 70px 22px 26px; }
-    .ed-text-card { border-radius: 18px; padding: 34px 30px; }
+    .ed-text-card { padding: 34px 30px; border-radius: 18px; }
     .ed-text-card-light { padding: 34px 30px; border-radius: 18px; }
     .ed-faq-item { border-radius: 12px; }
-    .ed-rec-card { border-radius: 18px; padding: 26px 22px 24px; }
+    .ed-rec-card { padding: 26px 22px 24px; border-radius: 18px; }
     .ed-body-text { line-height: 1.84; }
     .ed-monologue { line-height: 1.46; font-size: 1.58rem; }
     .ed-faq-a { line-height: 1.78; }
     .ed-rec-card-desc { line-height: 1.73; }
-    .ed-header-logo { letter-spacing: .02em; color: #FF4714; }
+    .ed-header-logo { color: #FF4714; letter-spacing: .02em; }
     /* dynamic section */
     .ed-sec h2 { color: #0d0d0d; letter-spacing: -.025em; }
-    .ed-sec-divider { background: #d94010; width: 60px; }
+    .ed-sec-divider { width: 60px; background: #d94010; }
     .ed-sec-light { background: #fefcfb; }
     .ed-sec-dark { background: #f6f6f4; }
     .ed-sec-mid { background: #f1f1ed; }
@@ -442,7 +454,7 @@
     <p class="ed-monologue">방법을 몰라서<br>다녀도 안 늘어요...</p>
     <p class="ed-monologue">공부 의욕이 없어서<br>걱정이에요...</p>
     <div class="ed-fact-box">
-      <p class="ed-fact-title">지금까지 다닌 학원</p>
+      <p class="ed-fact-title">{{지역}} {{키워드}}</p>
       <p class="ed-fact-title"><span class="ed-simple-underline">이게 다 됐나요?</span></p>
     </div>
   </div>
@@ -738,6 +750,8 @@
   </div>
 </section>
 
+{{랜덤이미지섹션}}
+
 <section class="ed-planner-section">
   <div class="ed-planner-inner">
     <p class="ed-planner-eyebrow">ACADEMY LOCATION</p>
@@ -763,7 +777,7 @@
      유동 영역 (DYNAMIC — result.html JSON)
      ════════════════════════════════════════════ -->
 
-<section class="ed-sec ed-sec-light">
+<section class="ed-sec ed-sec-light" id="sec1">
   <div class="ed-sec-inner">
     <div class="ed-sec-divider"></div>
     <h2>{{section1.h2}}</h2>
@@ -777,7 +791,7 @@
   </div>
 </section>
 
-<section class="ed-sec ed-sec-dark">
+<section class="ed-sec ed-sec-dark" id="sec2">
   <div class="ed-sec-inner">
     <div class="ed-sec-divider"></div>
     <h2>{{section2.h2}}</h2>
@@ -812,10 +826,10 @@
   </div>
 </section>
 
-<section class="ed-sec ed-sec-mid">
+<section class="ed-sec ed-sec-mid" id="sec3">
   <div class="ed-sec-inner">
     <div class="ed-sec-divider"></div>
-    <h2>{{section3.h2}}</h2>
+    <h2>{{지역}} 관리 학교</h2>
     <p class="ed-body-text">{{section3.p}}</p>
     <ul class="ed-check-list">
       <li class="ed-check-item"><span class="ed-check-icon">✓</span>{{section3.1}}</li>
@@ -825,7 +839,7 @@
   </div>
 </section>
 
-<section class="ed-sec ed-sec-light">
+<section class="ed-sec ed-sec-light" id="sec4">
   <div class="ed-sec-inner">
     <div class="ed-sec-divider"></div>
     <h2>{{section4.h2}}</h2>
@@ -835,7 +849,7 @@
   </div>
 </section>
 
-<section class="ed-sec ed-sec-dark">
+<section class="ed-sec ed-sec-dark" id="sec5">
   <div class="ed-sec-inner">
     <div class="ed-sec-divider"></div>
     <h2>{{section5.h2}}</h2>
@@ -843,7 +857,7 @@
   </div>
 </section>
 
-<section class="ed-sec ed-sec-mid">
+<section class="ed-sec ed-sec-mid" id="sec6">
   <div class="ed-sec-inner">
     <div class="ed-sec-divider"></div>
     <h2>{{section6.h2}}</h2>
@@ -851,7 +865,7 @@
   </div>
 </section>
 
-<section class="ed-sec ed-sec-light">
+<section class="ed-sec ed-sec-light" id="sec7">
   <div class="ed-sec-inner">
     <div class="ed-sec-divider"></div>
     <h2>{{section7.h2}}</h2>
@@ -861,7 +875,7 @@
   </div>
 </section>
 
-<section class="ed-sec ed-sec-dark">
+<section class="ed-sec ed-sec-dark" id="sec8">
   <div class="ed-sec-inner">
     <div class="ed-sec-divider"></div>
     <h2>{{section8.h2}}</h2>
@@ -874,7 +888,7 @@
 <section class="ed-sec ed-sec-light" id="info">
   <div class="ed-sec-inner">
     <div class="ed-sec-divider"></div>
-    <h2>{{section9.h2}}</h2>
+    <h2>{{지역}} {{키워드}} 정보</h2>
     <div class="ed-table-wrap">
       <table class="ed-info-table">
         <tr>
@@ -894,7 +908,7 @@
   </div>
 </section>
 
-<section class="ed-sec ed-sec-mid">
+<section class="ed-sec ed-sec-mid" id="faq">
   <div class="ed-sec-inner">
     <div class="ed-sec-divider"></div>
     <h2>{{section10.h2}}</h2>
@@ -906,6 +920,7 @@
 
 {{링크섹션}}
 
+{{학교ld}}
 
 <!-- ════════════════════════════════════════════
      스크립트
