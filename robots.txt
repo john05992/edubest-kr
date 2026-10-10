@@ -4,4 +4,4 @@ Allow: /
 User-agent: Yeti
 Allow: /
 
-Sitemap: https://edubest.kr/sitemap.xml
+Sitemap: https://edubest.kr/sitemapx.xml
